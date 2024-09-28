@@ -1,38 +1,486 @@
-.App {
-  text-align: center;
+/* HEADER */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  display: flex;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background-color: transparent !important;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* SOCIAL LOGOS */
+
+.header .social-logos{
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  width: calc(9vw + 2vw + 4vmin);
+  margin: calc(1vw + 1vw + 1vmin) calc(0.2vw + 0.3vw + 0.4vmin);
+}
+
+.header .social-logos .x-logo, 
+.header .social-logos .instagram-logo,
+.header .social-logos .linkedin-logo,
+.header .social-logos .regate-icon{
+  width: calc(0.4vw + 0.8vw + 0.8vmin);
+  height: calc(0.4vw + 0.8vw + 0.8vmin);
+  cursor: pointer;
+}
+
+.header .social-logos .x-logo:hover,
+.header .social-logos .instagram-logo:hover,
+.header .social-logos .linkedin-logo:hover,
+.header .social-logos .regate-icon:hover{
+  opacity: 0.5;
+}
+
+/* LOGO */
+
+.header .comet-logo{
+  padding-right: calc(2.4vw + 1.7vw + 1.7vmin);
+  width: calc(8.3vw + 4.7vw + 8.3vmin);
+  height: calc(1.6vw + 1vw + 3.1vmin);
+}
+
+/* HAMBURGUER MENU */
+
+.navbar-toggler{
+  border: none;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+.toggle-button{
+  width: 50px;
+  height: 2px;
+  margin: 8px 70px;
+  background-color: black;
+}
+
+/* GENERAL CONTAINER */
+
+.container-info{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2.5vw;
+  padding: 0 5vw;
+}
+
+.container-info .info-section{
+  width: 40vw;
+  padding: 60px 60px 10px 0;
+  animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.container-info .info-section .secondary-title h6{
+  color: #1A6EFA;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: calc(8px + 6px + 0.2vmin);
+}
+
+.container-info .info-section .principal-title h1{
+  color: black;
+  font-weight: bold;
+  margin-bottom: calc(0.8vw + 1vw + 1vmin);
+  font-size: calc(1.2vw + 3vh + 0.3vmin);
+
+}
+
+.container-info .info-section .subtitle{
+  font-size:  calc(1vw + 1vh + 0.6vmin);
+  color: #858587;
+}
+
+.container-info .info-section .subtitle span{
+  color: #3A3A3C;
+  
+}
+
+/* SERVICES CONTAINER */
+
+.container-info .services{
+  display: flex;
+  justify-content: space-between;
+  margin: 3.5vw 0;
+  animation: fade-in-left 2.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.container-info .services .analyze, .container-info .services .management{
   display: flex;
   flex-direction: column;
+  width: 16vw;
+}
+
+.container-info .services .analyze img{
+  width: 4.5vw;
+  height: 4.5vw;
+  margin-bottom: 1.5vw;
+}
+
+.container-info .services .management img{
+  width: 5vw;
+  height: 5vw;
+  margin-bottom: 1vw;
+}
+
+.container-info .services .analyze h3, .container-info .services h3{
+  font-weight: 700;
+  font-size:  calc(1vw + 0.6vh + 0.3vmin);
+  color: black;
+}
+
+.container-info .services .analyze p, .container-info .services p{
+  color: #4b4a4a;
+  font-weight: 600;
+  font-size:  calc(0.7vw + 0.7vh + 0.1vmin);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* LEARN MORE BUTTON */
+
+.container-info .services .learn-more{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 10vw;
+}
+
+.container-info .services .learn-more:hover{
+  opacity: 0.8;
+}
+
+.container-info .services .learn-more a{
+  display: flex;
   align-items: center;
+  font-size: calc(0.6vw + 0.3vw + 0.4vmin);
+}
+
+.container-info .services .learn-more a span{
+  margin-left: 0.4vw;
+  font-size: 1.4vw;
+}
+
+.container-info .services .learn-more .btn-line{
+  width: 1.2vw;
+  height: 0.1vw;
+  background-color: black;
+}
+
+/* SIDE IMAGE */
+
+.container-info .image{
+  height: calc(44vw + 8vmin);
+  width: calc(33vw + 7vmin);
+  animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  animation: slide-in-fwd-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.modal .content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  box-shadow: 1px 1px 16px 9px rgba(0,0,0,0.48);
+  width: 50vw; 
+  border-radius: 1vw;
+}
+
+.modal .content .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.modal .content .header h4{
+  margin-bottom: 0;
+}
+
+.modal .content .body{
+  padding: 0 1.5vw;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+/* FOOTER */
+
+.footer{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin: 2vw 0 2vw 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-content{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer h6{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.footer .contact{
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.footer .footer-content .contact a{
+  margin: 0 15px;
+}
+
+.footer .footer-content .contact a span{
+  color: black;
+  font-size: 26px;
+}
+
+.footer .footer-content .contact a span:hover, .footer .footer-content .contact .linkedin-logo:hover{
+  opacity: 0.8;
+}
+
+.footer .footer-content .contact .linkedin-logo{
+  width: 20px;
+  height: 20px;
+}
+
+.footer .footer-content .contact .icons{
+  display: flex;
+  justify-content: center;
+}
+.footer p{
+  font-size: 13px;
+}
+
+.footer .credits, .footer .contact{
+  width: 30vw;
+}
+
+
+/****** RESPONSIVE ******/
+
+@media (max-width:920px){
+  .container-info .services .analyze, .container-info .services .management{
+    width: 20vw;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media (max-width:770px){
+  .toggle-button{
+    width: 40px;
+    margin: 8px calc(1vw + 1vw + 1vmin);
+  }
+}
+
+@media (max-width:770px){
+
+  /* HEADER */
+
+  .header .social-logos{
+    width: 90px;
+    margin: 0 2px;
+  }
+  
+  .header .social-logos .x-logo{
+    width: 12px;
+    height: 12px;
+  }
+  
+  .header .social-logos .instagram-logo{
+    width: 16px;
+    height: 16px;
+  }
+  
+  .header .social-logos .linkedin-logo{
+    width: 14px;
+    height: 14px;
+  }
+  
+  .header .social-logos .regate-icon{
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* LOGO */
+  
+  .header .comet-logo{
+    width: 120px;
+    height: 40px;
+    padding-right: 5vw;
+  }
+
+  /* HAMBURGER MENU */
+
+  .toggle-button{
+    width: 30px;
+    margin: 8px 14px
+  }
+
+  /* GENERAL container-info */
+  .container-info{
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .container-info .info-section{
+    width: 90%;
+    padding: 7vw 0;
+  }
+
+  /* SIDE IMAGE */
+  .container-info .image{
+    object-fit: cover;
+    object-position: 0 27%;
+    height: 43vw;
+    width: 100%;
+  }
+
+  /* SERVICES */
+
+  .container-info .services{
+    justify-content: space-around;
+  }
+
+  .container-info .services .analyze, .container-info .services .management{
+    width: 40vw;
+  }
+
+  .container-info .services .analyze img{
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .container-info .services .management img{
+    width: 11vw;
+    height: 11vw;
+    margin-bottom: unset;
+  }
+
+  .container-info .services .analyze h3, .container-info .services h3{
+    font-size: 14px;
+  }
+
+  .container-info .services .analyze p, .container-info .services p{
+    font-size: 12px;
+  }
+
+  /* LEARN MORE BUTTON */
+
+  .container-info .services .learn-more{
+    width: 30vw;
+    font-size: 14px;
+  }
+
+  .container-info .services .learn-more a span{
+    font-size: 14px;
+  }
+
+  .container-info .services .learn-more .btn-line{
+    width: 5vw;
+  }
+
+  /* MODAL */
+
+  .modal .content {
+    width: 80%;
+    border-radius: 2vw;
+  }
+
+  /* FOOTER */
+
+  .footer-content .credits, .footer-content .contact{
+    width: 45vw;
+  }
+
+  .footer-content h6{
+    font-size: 13px;
+  }
+
+  .footer-content .contact{
+    font-size: 12px;
+  }
+
+  .footer-content p {
+    font-size: 11px;
+  }
+}
+
+/****** ANIMATIONS ******/
+
+
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
   }
 }
