@@ -15,16 +15,16 @@ function App() {
         <nav className="navbar bg-body-tertiary">
           <div className="container-fluid">
             <div className='social-logos'>
-              <a src='#'>
+              <a href='/'>
                 <img src="/x-logo.svg" className='x-logo' alt="x logo" />
               </a>
-              <a src='#'>
+              <a href='/'>
                 <img src="/instagram-logo.png" className='instagram-logo' alt="instagram logo" />      
               </a>
-              <a src='#'>
+              <a href='/'>
                 <img src="/linkedin-logo.svg" className='linkedin-logo' alt="linkedin logo" />      
               </a>
-              <a src='#'>
+              <a href='/'>
                 <img src="/regate-icon.png" className='regate-icon' alt="regate logo" />      
               </a>
             </div>
@@ -42,16 +42,16 @@ function App() {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    <a className="nav-link active" aria-current="page" href="/">Home</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
+                    <a className="nav-link" href="/">Link</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
+                    <a className="nav-link" href="/">Link</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
+                    <a className="nav-link" href="/">Link</a>
                   </li>
                 </ul>
               </div>
@@ -75,11 +75,11 @@ function App() {
           
           <div className='services col-md-12'>
             <div className='analyze col-md-6'>
-              <img src='/analyze-icon.png' />
+              <img src="/analyze-icon.png" alt="analyze icon" />
               <h3>System analyze your data</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <div className='learn-more'>
-                <a onClick={openModal} src='#' className='learn-more'>
+                <a onClick={openModal} href="/" className='learn-more'>
                   Learn more
                   <span className="material-symbols-outlined">arrow_outward</span>
                 </a>
@@ -88,11 +88,11 @@ function App() {
             </div>
 
             <div className='management col-md-6'>
-              <img src='/management-icon.png' />
+              <img src='/management-icon.png' alt="management icon" />
               <h3>Direct system management</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <div className='learn-more'>
-                <a onClick={openModal} src='#' className='learn-more'>
+                <a onClick={openModal} href='/' className='learn-more'>
                   Learn more
                   <span className="material-symbols-outlined">arrow_outward</span>
                 </a>
@@ -115,7 +115,7 @@ function App() {
           </div>
         </div>
 
-        <img src='/image.png' className='image'/>
+        <img src='/image.png' className='image' alt="side"/>
       </div>
       <hr />
       <footer className='footer'>
