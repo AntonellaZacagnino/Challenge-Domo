@@ -79,10 +79,10 @@ function App() {
               <h3>System analyze your data</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <div className='learn-more'>
-                <a onClick={openModal} href="/" className='learn-more'>
+                <button onClick={openModal} href="/" className='learn-more'>
                   Learn more
                   <span className="material-symbols-outlined">arrow_outward</span>
-                </a>
+                </button>
                 <div className='btn-line'></div>
               </div>
             </div>
@@ -92,10 +92,10 @@ function App() {
               <h3>Direct system management</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <div className='learn-more'>
-                <a onClick={openModal} href='/' className='learn-more'>
+                <button onClick={openModal} className='learn-more'>
                   Learn more
                   <span className="material-symbols-outlined">arrow_outward</span>
-                </a>
+                </button>
                 <div className='btn-line'></div>
               </div>
             </div>
@@ -132,6 +132,9 @@ function App() {
               </a>
               <a href='https://www.linkedin.com/in/antonella-zacagnino'>
                 <img src="/linkedin-logo.svg" className='linkedin-logo' alt="linkedin logo" />      
+              </a>
+              <a href='https://github.com/AntonellaZacagnino'>
+                <img src="/github-logo.svg" className='github-logo' alt="github logo" />      
               </a>
             </div>
           </div>

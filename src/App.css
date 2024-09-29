@@ -153,26 +153,30 @@ body{
   color: black;
   font-weight: bold;
   cursor: pointer;
-  width: 10vw;
+  width: 12vw;
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding-left: unset;
 }
 
 .container-info .services .learn-more:hover{
   opacity: 0.8;
 }
 
-.container-info .services .learn-more a{
+.container-info .services .learn-more button{
   display: flex;
   align-items: center;
-  font-size: calc(0.6vw + 0.3vw + 0.4vmin);
+  font-size: calc(0.5vw + 9.5px);
 }
 
-.container-info .services .learn-more a span{
+.container-info .services .learn-more button span{
   margin-left: 0.4vw;
   font-size: 1.4vw;
 }
 
 .container-info .services .learn-more .btn-line{
-  width: 1.2vw;
+  width: calc(1vw + 1vmin);
   height: 0.1vw;
   background-color: black;
 }
@@ -275,7 +279,8 @@ body{
   opacity: 0.8;
 }
 
-.footer .footer-content .contact .linkedin-logo{
+.footer .footer-content .contact .linkedin-logo,
+.footer .footer-content .contact .github-logo{
   width: 20px;
   height: 20px;
 }
@@ -409,12 +414,8 @@ body{
     font-size: 14px;
   }
 
-  .container-info .services .learn-more a span{
+  .container-info .services .learn-more button span{
     font-size: 14px;
-  }
-
-  .container-info .services .learn-more .btn-line{
-    width: 5vw;
   }
 
   /* MODAL */
