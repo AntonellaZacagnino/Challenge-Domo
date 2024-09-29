@@ -1,17 +1,22 @@
 import './App.css';
+
+import MainContainer  from './components/MainContainer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 function App() {
 
-  function openModal() {
-    document.getElementById('modal').style.display = 'block';
-  }
+  // function openModal() {
+  //   document.getElementById('modal').style.display = 'block';
+  // }
 
-  function closeModal(){
-    document.getElementById('modal').style.display = 'none'
-  }
+  // function closeModal(){
+  //   document.getElementById('modal').style.display = 'none'
+  // }
 
   return (
     <div className="App">
-      <header className="header">
+      <Header />
+      {/* <header className="header">
         <nav className="navbar bg-body-tertiary">
           <div className="container-fluid">
             <div className='social-logos'>
@@ -57,10 +62,10 @@ function App() {
 
           </div>
         </nav>
-      </header>
+      </header> */}
 
-
-      <div className='container-info col-md-12'>
+        <MainContainer />
+      {/* <div className='container-info col-md-12'>
         <div className='info-section'>
           <div className='secondary-title'>
             <h6>Core features</h6>
@@ -100,7 +105,7 @@ function App() {
           </div>
         </div>
 
-        <div id="modal" className="modal">
+        {/* <div id="modal" className="modal">
           <div className="content">
             <div class="header">
               <h4>Modal Title</h4>
@@ -110,12 +115,13 @@ function App() {
               <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             </div>
           </div>
-        </div>
+        </div> *}
 
         <img src='/image.png' className='image' alt="side"/>
-      </div>
+      </div> */}
       <hr />
-      <footer className='footer'>
+      <Footer />
+      {/* <footer className='footer'>
         <div className='footer-content'>
           <div className='credits'>
             <h6>Developed by Antonella Zacagnino</h6>
@@ -136,7 +142,7 @@ function App() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
